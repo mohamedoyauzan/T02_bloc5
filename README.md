@@ -19,7 +19,7 @@ L’objectiu és aprendre:
 ### Clonar repositori
 
 ```bash
-git clone URL_REPOSITORI
+git clone https://github.com/mohamedoyauzan/T02_bloc5.git
 ```
 
 ---
