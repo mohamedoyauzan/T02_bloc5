@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+Posts
+{% endblock %}
+
+{% block content %}
+
+<section id="all-posts">
+
+    <h1>Tots els Posts</h1>
+
+    <div class="posts-container">
+
+        {% for post in posts %}
+
+            {% include "blog/includes/post.html" %}
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}  
