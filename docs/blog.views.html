@@ -1,35 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
 <title>Python: module blog.views</title>
-</head><body>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
 
 <table class="heading">
 <tr class="heading-text decor">
-<td class="title">&nbsp;<br><strong class="title"><a href="blog.html" class="white">blog</a>.views</strong></td>
-<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cmoham%5Cdocuments%5Cprograming%5Cbloc%207%5Cporjecte%5Cblog%5Cviews.py">c:\users\moham\documents\programing\bloc 7\porjecte\blog\views.py</a></td></tr></table>
-    <p></p>
+<td class="title">
+&nbsp;<br>
+<strong class="title">
+<a href="blog.html" class="white">blog</a>.views
+</strong>
+</td>
+
+<td class="extra">
+<a href=".">index</a><br>
+
+<a href="file:c%3A%5Cusers%5Cmoham%5Cdocuments%5Cprograming%5Cbloc%207%5Cporjecte%5Cblog%5Cviews.py">
+c:\users\moham\documents\programing\bloc 7\porjecte\blog\views.py
+</a>
+</td>
+
+</tr>
+</table>
+
+<p></p>
+
 <p>
+
 <table class="section">
+
 <tr class="decor functions-decor heading-text">
-<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
-    
-<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
-<td class="singlecolumn"><dl><dt><a name="-index"><strong>index</strong></a>(request)</dt><dd><span class="code">Mostra&nbsp;la&nbsp;pàgina&nbsp;principal&nbsp;del&nbsp;blog.<br>
+<td class="section-title" colspan=3>
 &nbsp;<br>
-Aquesta&nbsp;vista&nbsp;carrega&nbsp;els&nbsp;3&nbsp;darrers&nbsp;posts<br>
-publicats&nbsp;ordenats&nbsp;per&nbsp;data&nbsp;descendent.</span></dd></dl>
- <dl><dt><a name="-post_detail"><strong>post_detail</strong></a>(request, slug)</dt><dd><span class="code">Mostra&nbsp;el&nbsp;detall&nbsp;d'un&nbsp;post&nbsp;concret.<br>
-&nbsp;<br>
+<strong class="bigsection">Functions</strong>
+</td>
+</tr>
+
+<tr>
+
+<td class="decor functions-decor">
+<span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</td>
+
+<td>&nbsp;</td>
+
+<td class="singlecolumn">
+
+<dl>
+<dt>
+<a name="-index"><strong>index</strong></a>(request)
+</dt>
+
+<dd>
+<span class="code">
+Mostra la pàgina principal del blog.<br>
+<br>
+Aquesta vista carrega els 3 darrers posts<br>
+publicats ordenats per data descendent.
+</span>
+</dd>
+</dl>
+
+<dl>
+<dt>
+<a name="-post_detail"><strong>post_detail</strong></a>(request, slug)
+</dt>
+
+<dd>
+<span class="code">
+Mostra el detall d'un post concret.<br>
+<br>
 Args:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;slug&nbsp;(str):&nbsp;slug&nbsp;únic&nbsp;del&nbsp;post.<br>
-&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;slug (str): slug únic del post.<br>
+<br>
 Returns:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;HttpResponse:&nbsp;pàgina&nbsp;amb&nbsp;el&nbsp;detall&nbsp;del&nbsp;post.</span></dd></dl>
- <dl><dt><a name="-posts_page"><strong>posts_page</strong></a>(request)</dt><dd><span class="code">Mostra&nbsp;tots&nbsp;els&nbsp;posts&nbsp;del&nbsp;blog.<br>
-&nbsp;<br>
-Recupera&nbsp;tots&nbsp;els&nbsp;posts&nbsp;de&nbsp;la&nbsp;base&nbsp;de&nbsp;dades<br>
-ordenats&nbsp;per&nbsp;data&nbsp;descendent.</span></dd></dl>
-</td></tr></table>
-</body></html>
+&nbsp;&nbsp;&nbsp;&nbsp;HttpResponse: pàgina amb el detall del post.
+</span>
+</dd>
+</dl>
+
+<dl>
+<dt>
+<a name="-posts_page"><strong>posts_page</strong></a>(request)
+</dt>
+
+<dd>
+<span class="code">
+Mostra tots els posts del blog.<br>
+<br>
+Recupera tots els posts de la base de dades<br>
+ordenats per data descendent.
+</span>
+</dd>
+</dl>
+
+</td>
+</tr>
+
+</table>
+
+</body>
+</html>
