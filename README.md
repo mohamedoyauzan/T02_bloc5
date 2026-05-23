@@ -3,13 +3,15 @@
 
 ## Documentació Pydoc
 
-Documentació automàtica generada amb Pydoc.
+### Views
 
-[Veure documentació](./docs/blog.views.html)
+[Veure documentació views](https://mohamedoyauzan.github.io/T02_bloc5/blog.views.html)
 
-## Documentació Pydoc
+### Models
 
-[Veure documentació Pydoc](https://mohamedoyauzan.github.io/T02_bloc5/blog.views.html)
+[Veure documentació models](https://mohamedoyauzan.github.io/T02_bloc5/blog.models.html)
+
+
 ## Introducció
 
 Aquest projecte consisteix en la creació d’un blog amb Django.
