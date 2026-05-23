@@ -1,5 +1,12 @@
 # Django Blog Project
 
+
+## Documentació Pydoc
+
+Documentació automàtica generada amb Pydoc.
+
+[Veure documentació](./docs/blog.views.html)
+
 ## Introducció
 
 Aquest projecte consisteix en la creació d’un blog amb Django.
