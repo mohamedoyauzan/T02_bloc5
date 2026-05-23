@@ -3,6 +3,12 @@ from .models import Post
 
 
 def index(request):
+    """
+    Mostra la pàgina principal del blog.
+
+    Aquesta vista carrega els 3 darrers posts
+    publicats ordenats per data descendent.
+    """
 
     latest_posts = Post.objects.all().order_by("-date")[:3]
 
@@ -12,6 +18,12 @@ def index(request):
 
 
 def posts_page(request):
+    """
+    Mostra tots els posts del blog.
+
+    Recupera tots els posts de la base de dades
+    ordenats per data descendent.
+    """
 
     all_posts = Post.objects.all().order_by("-date")
 
@@ -21,6 +33,15 @@ def posts_page(request):
 
 
 def post_detail(request, slug):
+    """
+    Mostra el detall d'un post concret.
+
+    Args:
+        slug (str): slug únic del post.
+
+    Returns:
+        HttpResponse: pàgina amb el detall del post.
+    """
 
     identified_post = Post.objects.get(slug=slug)
 

@@ -5,11 +5,11 @@
 
 ### Views
 
-[Veure documentació views](https://mohamedoyauzan.github.io/T02_bloc5/blog.views.html)
+[Views](https://mohamedoyauzan.github.io/T02_bloc5/blog.views.html)
 
 ### Models
 
-[Veure documentació models](https://mohamedoyauzan.github.io/T02_bloc5/blog.models.html)
+[Models](https://mohamedoyauzan.github.io/T02_bloc5/blog.models.html)
 
 
 ## Introducció

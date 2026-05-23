@@ -16,8 +16,20 @@
 <td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
     
 <tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
-<td class="singlecolumn"><dl><dt><a name="-index"><strong>index</strong></a>(request)</dt></dl>
- <dl><dt><a name="-post_detail"><strong>post_detail</strong></a>(request, slug)</dt></dl>
- <dl><dt><a name="-posts_page"><strong>posts_page</strong></a>(request)</dt></dl>
+<td class="singlecolumn"><dl><dt><a name="-index"><strong>index</strong></a>(request)</dt><dd><span class="code">Mostra&nbsp;la&nbsp;pàgina&nbsp;principal&nbsp;del&nbsp;blog.<br>
+&nbsp;<br>
+Aquesta&nbsp;vista&nbsp;carrega&nbsp;els&nbsp;3&nbsp;darrers&nbsp;posts<br>
+publicats&nbsp;ordenats&nbsp;per&nbsp;data&nbsp;descendent.</span></dd></dl>
+ <dl><dt><a name="-post_detail"><strong>post_detail</strong></a>(request, slug)</dt><dd><span class="code">Mostra&nbsp;el&nbsp;detall&nbsp;d'un&nbsp;post&nbsp;concret.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;slug&nbsp;(str):&nbsp;slug&nbsp;únic&nbsp;del&nbsp;post.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;HttpResponse:&nbsp;pàgina&nbsp;amb&nbsp;el&nbsp;detall&nbsp;del&nbsp;post.</span></dd></dl>
+ <dl><dt><a name="-posts_page"><strong>posts_page</strong></a>(request)</dt><dd><span class="code">Mostra&nbsp;tots&nbsp;els&nbsp;posts&nbsp;del&nbsp;blog.<br>
+&nbsp;<br>
+Recupera&nbsp;tots&nbsp;els&nbsp;posts&nbsp;de&nbsp;la&nbsp;base&nbsp;de&nbsp;dades<br>
+ordenats&nbsp;per&nbsp;data&nbsp;descendent.</span></dd></dl>
 </td></tr></table>
 </body></html>

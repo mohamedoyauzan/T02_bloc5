@@ -2,6 +2,11 @@ from django.db import models
 
 
 class Author(models.Model):
+    """
+    Model que representa un autor del blog.
+
+    Cada autor pot tenir múltiples posts.
+    """
 
     first_name = models.CharField(max_length=50)
 
@@ -14,6 +19,11 @@ class Author(models.Model):
 
 
 class Tag(models.Model):
+    """
+    Model que representa una etiqueta o categoria.
+
+    Les tags serveixen per classificar els posts.
+    """
 
     caption = models.CharField(max_length=20)
 
@@ -22,6 +32,12 @@ class Tag(models.Model):
 
 
 class Post(models.Model):
+    """
+    Model principal del blog.
+
+    Conté tota la informació relacionada amb
+    una publicació del blog.
+    """
 
     title = models.CharField(max_length=150)
 

@@ -1,5 +1,7 @@
 name: Django CI
 
+name: Django CI
+
 on:
   push:
     branches: [ main ]
@@ -33,12 +35,13 @@ jobs:
 
     - name: Generate Pydoc
       run: |
-        python manage.py shell -c "import pydoc; import blog.views; pydoc.writedoc(blog.views)"
+        python manage.py shell -c "import pydoc; import blog.views; import blog.models; pydoc.writedoc(blog.views); pydoc.writedoc(blog.models)"
 
     - name: Create docs folder
       run: |
         mkdir -p docs
         mv blog.views.html docs/
+        mv blog.models.html docs/
 
     - name: Upload docs
       uses: actions/upload-artifact@v4
