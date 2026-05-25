@@ -1,0 +1,40 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<h1 class="mb-5 text-center">
+    Authors
+</h1>
+
+<div class="row g-4">
+
+{% for author in authors %}
+
+<div class="col-md-4">
+
+    <div class="card shadow-sm p-4 text-center">
+
+        <h3>
+            {{ author.first_name }} {{ author.last_name }}
+        </h3>
+
+        <p>
+            {{ author.email }}
+        </p>
+
+        <a
+            href="{% url 'author-detail-page' author.id %}"
+            class="btn btn-dark"
+        >
+            Veure Autor
+        </a>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

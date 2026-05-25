@@ -1,0 +1,53 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<h1 class="mb-4">
+    {{ author.first_name }} {{ author.last_name }}
+</h1>
+
+<p class="lead">
+    {{ author.bio }}
+</p>
+
+<h2 class="mt-5 mb-4">
+    Posts de l'autor
+</h2>
+
+<div class="row g-4">
+
+{% for post in author.posts.all %}
+
+<div class="col-md-4">
+
+    <div class="card h-100 shadow-sm">
+
+        <img
+            src="{{ post.image_name }}"
+            class="card-img-top"
+        >
+
+        <div class="card-body">
+
+            <h4>
+                {{ post.title }}
+            </h4>
+
+            <a
+                href="{% url 'post-detail-page' post.slug %}"
+                class="btn btn-dark"
+            >
+                Llegir més
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

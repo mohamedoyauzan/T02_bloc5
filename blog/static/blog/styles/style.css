@@ -112,3 +112,57 @@
 
     text-decoration: none;
 }
+
+
+.post-card {
+    transition: 0.3s;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+
+.hero-section {
+    padding: 80px 0;
+}
+
+.hero-image {
+    max-height: 450px;
+    object-fit: cover;
+}
+
+.hero-section h1 {
+    color: #212529;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+}
+
+
+
+.post-detail {
+    max-width: 900px;
+    margin: auto;
+}
+
+.detail-image {
+    max-height: 350px;
+    max-width: 800px;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+}
+
+.post-detail p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}

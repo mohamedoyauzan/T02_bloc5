@@ -1,25 +1,54 @@
 {% extends "blog/base.html" %}
 
 {% block title %}
-Posts
+Tots els Posts
 {% endblock %}
 
 {% block content %}
 
-<section id="all-posts">
+<h1 class="mb-5 text-center fw-bold">
+    Tots els Posts
+</h1>
 
-    <h1>Tots els Posts</h1>
+<div class="row g-4">
 
-    <div class="posts-container">
+    {% for post in posts %}
 
-        {% for post in posts %}
+    <div class="col-md-6 col-lg-4">
 
-            {% include "blog/includes/post.html" %}
+        <div class="card h-100 shadow-sm border-0 post-card">
 
-        {% endfor %}
+            <img
+                src="{{ post.image_name }}"
+                class="card-img-top"
+                alt="{{ post.title }}"
+            >
+
+            <div class="card-body d-flex flex-column">
+
+                <h4 class="card-title">
+                    {{ post.title }}
+                </h4>
+
+                <p class="card-text text-muted">
+                    {{ post.excerpt }}
+                </p>
+
+                <a
+                    href="{% url 'post-detail-page' post.slug %}"
+                    class="btn btn-dark mt-auto"
+                >
+                    Llegir més
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
-</section>
+    {% endfor %}
 
-{% endblock %}  
+</div>
+
+{% endblock %}

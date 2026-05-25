@@ -6,33 +6,91 @@ Home
 
 {% block content %}
 
-<div class="main-container">
+<section class="hero-section mb-5">
 
-    <section class="hero">
+    <div class="row align-items-center">
 
-        <h1>Mohamed Blog</h1>
+        <div class="col-lg-6">
 
-        <p>
-            Blog sobre Django, Python i Programació
-        </p>
+            <h1 class="display-3 fw-bold mb-4">
+                Mohamed Blogs
+            </h1>
 
-    </section>
+            <p class="lead mb-4">
 
-    <section class="posts-section">
+                Benvingut al meu blog personal sobre
+                programació, Django, Python i desenvolupament web.
 
-        <h2>Últims Posts</h2>
+                Aquí comparteixo projectes, tutorials
+                i contingut relacionat amb tecnologia.
 
-        <div class="posts-grid">
+            </p>
 
-            {% for post in posts %}
-
-                {% include "blog/includes/post.html" %}
-
-            {% endfor %}
+            <a
+                href="{% url 'posts-page' %}"
+                class="btn btn-dark btn-lg"
+            >
+                Veure Posts
+            </a>
 
         </div>
 
-    </section>
+        <div class="col-lg-6 text-center">
+
+            <img
+                src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop"
+                class="img-fluid rounded-4 shadow hero-image"
+                alt="Programming"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+<h1 class="mb-5 text-center fw-bold">
+    Últimos Posts
+</h1>
+
+<div class="row g-4">
+
+    {% for post in posts %}
+
+    <div class="col-md-6 col-lg-4">
+
+        <div class="card h-100 shadow-sm border-0 post-card">
+
+            <img
+                src="{{ post.image_name }}"
+                class="card-img-top"
+                alt="{{ post.title }}"
+            >
+
+            <div class="card-body d-flex flex-column">
+
+                <h4 class="card-title">
+                    {{ post.title }}
+                </h4>
+
+                <p class="card-text text-muted">
+                    {{ post.excerpt }}
+                </p>
+
+                <a
+                    href="{% url 'post-detail-page' post.slug %}"
+                    class="btn btn-dark mt-auto"
+                >
+                    Llegir més
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
 
 </div>
 
