@@ -1,0 +1,35 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+404
+{% endblock %}
+
+{% block content %}
+
+<div class="text-center py-5">
+
+    <h1 class="display-1 fw-bold text-danger">
+        404
+    </h1>
+
+    <h2 class="mb-4">
+        Página no encontrada
+    </h2>
+
+    <p class="lead mb-5">
+
+        La pàgina que busques no existeix
+        o ha sigut eliminada.
+
+    </p>
+
+    <a
+        href="{% url 'starting-page' %}"
+        class="btn btn-dark btn-lg"
+    >
+        Tornar al Home
+    </a>
+
+</div>
+
+{% endblock %}

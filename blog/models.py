@@ -14,6 +14,9 @@ class Author(models.Model):
     def __str__(self):
 
         return f"{self.first_name} {self.last_name}"
+    
+    def post_count(self):
+        return self.post_count()
 
 
 class Tag(models.Model):
@@ -38,7 +41,6 @@ class Post(models.Model):
     content = models.TextField()
 
     date = models.DateField(auto_now_add=True)
-
     author = models.ForeignKey(
         Author,
         on_delete=models.CASCADE,

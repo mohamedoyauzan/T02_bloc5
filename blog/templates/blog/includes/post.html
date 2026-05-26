@@ -1,21 +1,31 @@
-{% load static %}
+<div class="col-md-6 col-lg-4">
 
-<div class="post-card">
+    <div class="card h-100 shadow-sm border-0 post-card">
 
-    <img
-        src="{% static 'blog/images/'|add:post.image_name %}"
-        alt="{{ post.title }}"
-    >
+        <img
+            src="{{ post.image_name }}"
+            class="card-img-top"
+            alt="{{ post.title }}"
+        >
 
-    <div class="post-info">
+        <div class="card-body d-flex flex-column">
 
-        <h2>{{ post.title }}</h2>
+            <h4 class="card-title">
+                {{ post.title }}
+            </h4>
 
-        <p>{{ post.excerpt }}</p>
+            <p class="card-text text-muted">
+                {{ post.excerpt }}
+            </p>
 
-        <a href="/posts/{{ post.slug }}">
-            Llegir més
-        </a>
+            <a
+                href="{% url 'post-detail-page' post.slug %}"
+                class="btn btn-dark mt-auto"
+            >
+                Llegir més
+            </a>
+
+        </div>
 
     </div>
 

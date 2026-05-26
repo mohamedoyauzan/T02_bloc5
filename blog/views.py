@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Post
 from .models import Post, Author, Tag
+from django.http import Http404
 
 def index(request):
     """
@@ -10,7 +11,7 @@ def index(request):
     publicats ordenats per data descendent.
     """
 
-    latest_posts = Post.objects.all().order_by("-date")[:3]
+    latest_posts = Post.objects.all().order_by("-date", "-id")[:3]
 
     return render(request, "blog/index.html", {
         "posts": latest_posts
@@ -25,7 +26,7 @@ def posts_page(request):
     ordenats per data descendent.
     """
 
-    all_posts = Post.objects.all().order_by("-date")
+    all_posts = Post.objects.all().order_by("-date", "-id")
 
     return render(request, "blog/post_list.html", {
         "posts": all_posts
@@ -93,8 +94,7 @@ def tag_posts_page(request, tag_id):
 
     tag = Tag.objects.get(id=tag_id)
 
-    posts = tag.post_set.all()
-
+    posts = tag.post_set.all().order_by("-date", "-id")   
     return render(
         request,
         "blog/tag_posts.html",
